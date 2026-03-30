@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aisha Jalil | Backend Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Aisha Jalil — backend-focused software engineer specializing in Java Spring Boot, Python/FastAPI, distributed systems, and scalable APIs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- =========================================================
+     Header
+  ========================================================= -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <a href="index.html">Aisha Jalil<span class="accent">.</span></a>
+        </div>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          onclick="document.querySelector('.main-nav').classList.toggle('open')"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav">
+          <a class="nav-item active" href="index.html">Home</a>
+          <a class="nav-item" href="pages/about.html">About</a>
+          <a class="nav-item" href="pages/projects.html">Projects</a>
+          <a class="nav-item" href="pages/certifications.html"
+            >Certifications</a
+          >
+          <a class="nav-item" href="pages/achievements.html">Achievements</a>
+          <a class="nav-item" href="pages/contact.html">Contact</a>
+          <a
+            class="nav-item nav-resume"
+            href="resume/Aisha_Jalil_Resume.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fas fa-download" style="font-size: 0.75rem"></i> Resume
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================================================
+     Hero
+  ========================================================= -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-up delay-1">
+            <span class="dot"></span>
+            <span>Open to opportunities</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-up delay-2">
+            Hi, I'm<br /><em>Aisha Jalil</em>
+          </h1>
+
+          <p class="hero-subtitle animate-fade-up delay-3">
+            <strong>Backend Software Engineer</strong> — Java Spring Boot &amp;
+            Python FastAPI
+          </p>
+
+          <p class="hero-desc animate-fade-up delay-3">
+            I design and build secure, scalable backend systems and APIs. My
+            focus is on domain modeling, clean architecture, reliable data
+            pipelines, and production readiness: observability, testing, CI/CD,
+            and cloud-native deployment.
+          </p>
+
+          <div class="hero-actions animate-fade-up delay-4">
+            <a href="pages/projects.html" class="btn cta-primary">
+              <i class="fas fa-folder-open"></i> View My Work
+            </a>
+            <a href="pages/contact.html" class="btn cta-outline">
+              <i class="fas fa-paper-plane"></i> Contact Me
+            </a>
+            <a
+              href="resume/Aisha_Jalil_Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              class="btn cta-ghost"
+            >
+              <i class="fas fa-download"></i> Resume
+            </a>
+          </div>
+
+          <div class="hero-social animate-fade-up delay-5">
+            <a
+              class="social-link"
+              href="https://github.com/AishaJalil"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/in/aisha-jalil"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              class="social-link"
+              href="https://www.upwork.com/freelancers/~01e3a2f156e42651ad?viewMode=1"
+              target="_blank"
+              aria-label="UpWork"
+              ><i class="fab fa-upwork"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="hero-card animate-fade-up delay-4">
+          <p class="hero-card-title">Quick Stats</p>
+          <div class="stat-item">
+            <div class="stat-num">3.65</div>
+            <div class="stat-label">CGPA at FAST-NUCES</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-num">3×</div>
+            <div class="stat-label">Dean's Honor List</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     About Preview
+  ========================================================= -->
+    <section class="about-preview section-pad">
+      <div class="container about-preview-grid">
+        <div class="about-preview-content reveal">
+          <div class="section-label">About Me</div>
+          <h2>Building systems that scale &amp; perform</h2>
+          <p>
+            I'm a Computer Science student at FAST-NUCES passionate about
+            backend architecture, AI, and data-driven problem solving. I
+            specialize in
+            <strong style="color: var(--text)"
+              >Java Spring Boot, FastAPI, PostgreSQL</strong
+            >, and modern cloud-native stacks.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Java Spring Boot</span>
+            <span class="tag">Python FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+            <span class="tag">React</span>
+          </div>
+          <a href="pages/about.html" class="btn cta-outline"
+            >Learn More
+            <i class="fas fa-arrow-right" style="font-size: 0.8rem"></i
+          ></a>
+        </div>
+        <div class="about-preview-visual reveal">
+          <div class="profile-frame">
+            <img src="images/profile.jpg" alt="Aisha Jalil" />
+          </div>
+          <div class="profile-accent">Dean's<br />List<br />3×</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     Featured Projects
+  ========================================================= -->
+    <section class="featured section-pad">
+      <div class="container">
+        <div class="featured-header reveal">
+          <div>
+            <div class="section-label">Featured Projects</div>
+            <h2>Selected Work</h2>
+          </div>
+          <p class="section-intro">
+            A curated look at things I've built — from multi-tenant SaaS
+            platforms to AI-powered systems.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-card-top"></div>
+            <div class="project-card-content">
+              <div class="project-number">01 — Backend</div>
+              <h3>Multi-Core CRM Platform</h3>
+              <p>
+                Multi-tenant SaaS CRM with REST APIs, JWT auth, RBAC, and
+                customer/lead/deal workflows backed by PostgreSQL.
+              </p>
+              <div class="project-card-footer">
+                <a class="project-link" href="pages/projects.html#crm"
+                  >View Project <i class="fas fa-arrow-right"></i
+                ></a>
+                <div style="display: flex; gap: 0.4rem">
+                  <span class="tag" style="font-size: 0.65rem"
+                    >Spring Boot</span
+                  >
+                  <span class="tag" style="font-size: 0.65rem">PostgreSQL</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"></div>
+            <div class="project-card-content">
+              <div class="project-number">02 — Full-Stack</div>
+              <h3>Code-Fu Debugging Platform</h3>
+              <p>
+                Real-time debugging competition with automated evaluation,
+                scoring, and multi-language code execution via Piston API.
+              </p>
+              <div class="project-card-footer">
+                <a class="project-link" href="pages/projects.html#codefu"
+                  >View Project <i class="fas fa-arrow-right"></i
+                ></a>
+                <div style="display: flex; gap: 0.4rem">
+                  <span class="tag" style="font-size: 0.65rem">FastAPI</span>
+                  <span class="tag" style="font-size: 0.65rem">Next.js</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"></div>
+            <div class="project-card-content">
+              <div class="project-number">03 — AI/ML</div>
+              <h3>SmartBazaar App</h3>
+              <p>
+                Localized digital marketplace for Pakistani farmers with
+                Gemini-powered AI assistant and multilingual support.
+              </p>
+              <div class="project-card-footer">
+                <a class="project-link" href="pages/projects.html"
+                  >View Project <i class="fas fa-arrow-right"></i
+                ></a>
+                <div style="display: flex; gap: 0.4rem">
+                  <span class="tag" style="font-size: 0.65rem">Firebase</span>
+                  <span class="tag" style="font-size: 0.65rem">Gemini AI</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="center-btn reveal">
+          <a href="pages/projects.html" class="btn cta-primary"
+            >See All Projects <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     Services
+  ========================================================= -->
+    <section class="services section-pad">
+      <div class="container">
+        <div class="services-header reveal">
+          <div class="section-label">What I Do</div>
+          <h2>Services &amp; Expertise</h2>
+          <p class="section-intro" style="margin-top: 0.75rem">
+            I craft innovative, high-quality solutions across web development,
+            mobile apps, AI, and data analytics — delivering scalable,
+            user-focused applications.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>
+              Responsive, high-performance sites using HTML, CSS, JS &amp;
+              modern frameworks.
+            </p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3>App Development</h3>
+            <p>
+              Cross-platform mobile apps with Flutter for seamless user
+              experiences.
+            </p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>AI / ML Solutions</h3>
+            <p>
+              Custom models for NLP, predictive systems, and real-world AI
+              projects.
+            </p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Data Analytics</h3>
+            <p>
+              Turning raw data into insights with visualization &amp;
+              interpretation tools.
+            </p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-flask"></i></div>
+            <h3>AI Research</h3>
+            <p>
+              Exploring neural networks &amp; deep learning to solve complex
+              challenges.
+            </p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3>Prompt Engineering</h3>
+            <p>
+              Crafting optimized prompts for AI models to achieve precise,
+              impactful responses.
+            </p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="fa-brands fa-python"></i></div>
+            <h3>Python Programming</h3>
+            <p>
+              Building robust scripts and applications for automation, AI, and
+              backend systems.
+            </p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>API Integration</h3>
+            <p>
+              Developing efficient API integrations and workflow automations for
+              scalable systems.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     Certifications Preview
+  ========================================================= -->
+    <section class="certifications section-pad">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">Credentials</div>
+          <h2>Certifications</h2>
+          <p class="section-intro" style="margin-top: 0.5rem">
+            Recognitions from competitions, events, and technical programs.
+          </p>
+        </div>
+        <div class="certifications-grid">
+          <div class="cert-card reveal">
+            <i class="fa-solid fa-brain"></i>
+            <h3>DataCamp — Understanding of Machine Learning</h3>
+            <p>
+              Foundational knowledge of ML algorithms and practical
+              implementation techniques.
+            </p>
+          </div>
+          <div class="cert-card reveal">
+            <i class="fa-solid fa-trophy"></i>
+            <h3>Procom 2025 — Interstellar Intelligence</h3>
+            <p>Designed the CS module for Procom 2025 at FAST University.</p>
+          </div>
+          <div class="cert-card reveal">
+            <i class="fa-solid fa-code"></i>
+            <h3>Dev Day — Speed Programming</h3>
+            <p>
+              Organized by ACM at FAST University, showcasing rapid
+              problem-solving skills.
+            </p>
+          </div>
+        </div>
+        <div class="center-btn reveal">
+          <a href="pages/certifications.html" class="btn cta-outline"
+            >View All Certifications <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     Achievements Preview
+  ========================================================= -->
+    <section class="achievements section-pad">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">Honors</div>
+          <h2>Achievements &amp; Recognition</h2>
+          <p class="section-intro" style="margin-top: 0.5rem">
+            Academic recognition for consistent high performance at FAST
+            University.
+          </p>
+        </div>
+        <div class="achievements-grid achievements-grid--home">
+          <article class="ach-card reveal">
+            <div class="ach-icon"><i class="fa-solid fa-medal"></i></div>
+            <h3>Dean's List — Spring 2024</h3>
+            <p>
+              Recognized for outstanding academic achievement in upper-division
+              CS courses.
+            </p>
+          </article>
+          <article class="ach-card reveal">
+            <div class="ach-icon"><i class="fa-solid fa-medal"></i></div>
+            <h3>Dean's List — Fall 2023</h3>
+            <p>Placed among top-performing Computer Science students.</p>
+          </article>
+          <article class="ach-card reveal">
+            <div class="ach-icon"><i class="fa-solid fa-medal"></i></div>
+            <h3>Dean's List — Spring 2023</h3>
+            <p>High academic standing across core CS coursework.</p>
+          </article>
+        </div>
+        <div class="center-btn reveal">
+          <a href="pages/achievements.html" class="btn cta-outline"
+            >View All Achievements <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     CTA Banner
+  ========================================================= -->
+    <section class="cta-banner">
+      <div class="container cta-banner-inner reveal">
+        <div
+          class="section-label"
+          style="justify-content: center; margin-bottom: 1rem"
+        >
+          Let's Collaborate
+        </div>
+        <h2>Let's Work Together</h2>
+        <p>
+          Looking for a backend engineer or collaborator for your next project?
+        </p>
+        <a href="pages/contact.html" class="btn cta-primary"
+          >Get In Touch <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     Footer
+  ========================================================= -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="index.html"
+            >Aisha Jalil<span class="accent">.</span></a
+          >
+          <p class="footer-tagline">
+            Building reliable backends, clear APIs, and scalable systems.
+          </p>
+        </div>
+        <nav>
+          <p class="footer-nav-title">Navigation</p>
+          <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/projects.html">Projects</a>
+            <a href="pages/certifications.html">Certifications</a>
+            <a href="pages/contact.html">Contact</a>
+            <a
+              href="resume/Aisha_Jalil_Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              >Resume</a
+            >
+          </div>
+        </nav>
+        <div>
+          <p class="footer-social-title">Connect</p>
+          <div class="footer-social-links">
+            <a
+              class="footer-social-link"
+              href="https://github.com/AishaJalil"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              class="footer-social-link"
+              href="https://www.linkedin.com/in/aisha-jalil"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              class="footer-social-link"
+              href="https://vercel.com/aisha-jalils-projects"
+              target="_blank"
+              aria-label="Vercel"
+              ><i class="fa-solid fa-globe"></i
+            ></a>
+            <a
+              class="footer-social-link"
+              href="mailto:aishajalil387@gmail.com"
+              aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2025 Aisha Jalil. All rights reserved.</p>
+        <p class="footer-bottom-right">
+          Crafted with <span class="accent">♥</span> in Karachi
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Intersection Observer for reveal animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((el) => {
+            if (el.isIntersecting) {
+              el.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

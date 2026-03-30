@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications | Aisha Jalil</title>
+  <meta name="description" content="Certifications and recognitions by Aisha Jalil from competitions and technical events." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><a href="../index.html">Aisha Jalil<span class="accent">.</span></a></div>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.main-nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <a class="nav-item" href="../index.html">Home</a>
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="projects.html">Projects</a>
+        <a class="nav-item active" href="certifications.html">Certifications</a>
+        <a class="nav-item" href="achievements.html">Achievements</a>
+        <a class="nav-item" href="contact.html">Contact</a>
+        <a class="nav-item nav-resume" href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener"><i class="fas fa-download" style="font-size:0.75rem"></i> Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label animate-fade-up delay-1">Credentials</div>
+      <h1 class="animate-fade-up delay-2">Certifications</h1>
+      <p class="animate-fade-up delay-3">Recognitions and achievements from competitions, events, and technical programs.</p>
+    </div>
+  </div>
+
+  <section class="section-pad" style="background:var(--bg)">
+    <div class="container">
+      <div class="certifications-page-grid">
+
+        <div class="cert-page-card reveal">
+          <img src="../images/uml.jpg" alt="Understanding of Machine Learning" />
+          <div class="cert-page-content">
+            <h3>Understanding of Machine Learning</h3>
+            <p>Issued by DataCamp | 2025</p>
+          </div>
+        </div>
+
+        <div class="cert-page-card reveal">
+          <img src="../images/procom.jpg" alt="Procom 2025" />
+          <div class="cert-page-content">
+            <h3>Procom 2025 — Interstellar Intelligence</h3>
+            <p>Designed the CS module for Procom 2025 at FAST University.</p>
+          </div>
+        </div>
+
+        <div class="cert-page-card reveal">
+          <img src="../images/dev-day.jpg" alt="Dev Day Speed Programming" />
+          <div class="cert-page-content">
+            <h3>Dev Day — Speed Programming</h3>
+            <p>Organized by ACM at FAST University. Demonstrated rapid problem-solving.</p>
+          </div>
+        </div>
+
+        <div class="cert-page-card reveal">
+          <img src="../images/ACM-hack%20weeks.jpg" alt="Hack Weeks" />
+          <div class="cert-page-content">
+            <h3>Hack Weeks</h3>
+            <p>Participated in innovation-driven hackathons organized by ACM at FAST.</p>
+          </div>
+        </div>
+
+        <div class="cert-page-card reveal">
+          <img src="../images/ctf.jpg" alt="Capture the Flag" />
+          <div class="cert-page-content">
+            <h3>Capture the Flag</h3>
+            <p>Competed in cybersecurity challenge organized by ACM at FAST University.</p>
+          </div>
+        </div>
+
+        <div class="cert-page-card reveal">
+          <img src="../images/sql-comp.jpg" alt="SQL Competition" />
+          <div class="cert-page-content">
+            <h3>SQL Competition</h3>
+            <p>Demonstrated advanced database querying and optimization skills.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="footer-logo" href="../index.html">Aisha Jalil<span class="accent">.</span></a>
+        <p class="footer-tagline">Building reliable backends, clear APIs, and scalable systems.</p>
+      </div>
+      <nav>
+        <p class="footer-nav-title">Navigation</p>
+        <div class="footer-nav">
+          <a href="../index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+          <a href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+      </nav>
+      <div>
+        <p class="footer-social-title">Connect</p>
+        <div class="footer-social-links">
+          <a class="footer-social-link" href="https://github.com/AishaJalil" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a class="footer-social-link" href="https://www.linkedin.com/in/aisha-jalil" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a class="footer-social-link" href="mailto:aishajalil387@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2025 Aisha Jalil. All rights reserved.</p>
+      <p class="footer-bottom-right">Crafted with <span class="accent">♥</span> in Karachi</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
