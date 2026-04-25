@@ -4,34 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Aisha Jalil — Backend Software Engineer</title>
-    <meta
-      name="description"
-      content="About Aisha Jalil — backend-focused software engineer specializing in Java Spring Boot, FastAPI, PostgreSQL, and scalable systems design."
-    />
+    <meta name="description" content="About Aisha Jalil — backend-focused software engineer specializing in Java Spring Boot, FastAPI, PostgreSQL, and scalable systems design." />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <meta property="og:title" content="About | Aisha Jalil" />
+    <meta property="og:description" content="Rector's List &amp; Dean's Honor List engineer at FAST-NUCES — building scalable backend systems." />
+    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
     <header class="site-header">
       <div class="container header-inner">
-        <div class="logo">
-          <a href="../index.html">Aisha Jalil<span class="accent">.</span></a>
-        </div>
-        <button
-          class="nav-toggle"
-          aria-label="Toggle navigation"
-          onclick="document.querySelector('.main-nav').classList.toggle('open')"
-        >
+        <div class="logo"><a href="../index.html">Aisha Jalil<span class="accent">.</span></a></div>
+        <button class="nav-toggle" aria-label="Toggle navigation"
+          onclick="document.querySelector('.main-nav').classList.toggle('open')">
           <span></span><span></span><span></span>
         </button>
         <nav class="main-nav">
@@ -41,63 +34,50 @@
           <a class="nav-item" href="certifications.html">Certifications</a>
           <a class="nav-item" href="achievements.html">Achievements</a>
           <a class="nav-item" href="contact.html">Contact</a>
-          <a
-            class="nav-item nav-resume"
-            href="../resume/Aisha_Jalil_Resume.pdf"
-            target="_blank"
-            rel="noopener"
-            ><i class="fas fa-download" style="font-size: 0.75rem"></i>
-            Resume</a
-          >
+          <a class="nav-item nav-resume" href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener">
+            <i class="fas fa-download" style="font-size:0.75rem"></i> Resume
+          </a>
         </nav>
       </div>
     </header>
 
-    <!-- Page Hero -->
     <div class="page-hero">
       <div class="container">
+        <a class="back-btn animate-fade-up delay-1" href="../index.html">
+          <i class="fas fa-arrow-left"></i> Back
+        </a>
         <div class="section-label animate-fade-up delay-1">About Me</div>
         <h1 class="animate-fade-up delay-2">The engineer behind the code</h1>
         <p class="animate-fade-up delay-3">
-          Dean's List student at FAST-NUCES building scalable systems, clean
-          APIs, and impactful software.
+          Rector's List &amp; Dean's Honor List student at FAST-NUCES — building scalable systems, clean APIs, and impactful software.
         </p>
       </div>
     </div>
 
-    <!-- About Body -->
     <section class="about-body section-pad">
       <div class="container about-content-grid">
+
         <!-- Main Content -->
         <div class="about-text">
           <div class="reveal">
             <h2>Who I Am</h2>
             <p>
-              I'm <strong style="color: var(--text)">Aisha Jalil</strong>, a
-              Software Engineer and
-              <strong style="color: var(--text)">Dean's Honor List</strong>
-              student at
-              <strong style="color: var(--text)">FAST-NUCES</strong> with a
-              <strong style="color: var(--text)">3.61 CGPA</strong>. I
-              specialize in building scalable, high-impact digital solutions and
-              architecting robust systems that bridge the gap between technical
-              complexity and real-world accessibility.
+              I'm <strong style="color:var(--text)">Aisha Jalil</strong>, a Software Engineer and
+              <strong style="color:#fbbf24">Rector's List</strong> (Fall 2025) &amp;
+              <strong style="color:var(--text)">Dean's Honor List</strong> honoree (5 consecutive semesters) at
+              <strong style="color:var(--text)">FAST-NUCES</strong> with a
+              <strong style="color:var(--text)">3.65 CGPA</strong>. I specialize in building scalable,
+              high-impact digital solutions and architecting robust systems that bridge the gap between
+              technical complexity and real-world accessibility.
             </p>
             <p>
-              My expertise lies in
-              <strong style="color: var(--text)"
-                >Full-Stack Development and Microservices</strong
-              >, working primarily with Java Spring Boot, FastAPI, and React. I
-              have a deep interest in designing resilient backend architectures,
-              integrating Generative AI for localized impact, and deploying
+              My expertise lies in <strong style="color:var(--text)">Full-Stack Development and Microservices</strong>,
+              working primarily with Java Spring Boot, FastAPI, and React. I have a deep interest in designing
+              resilient backend architectures, integrating Generative AI for localized impact, and deploying
               efficient services using Docker and modern cloud-native tooling.
             </p>
-            <a
-              href="../resume/Aisha_Jalil_Resume.pdf"
-              target="_blank"
-              rel="noopener"
-              class="btn cta-primary about-resume-btn"
-            >
+            <a href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener"
+               class="btn cta-primary about-resume-btn">
               <i class="fas fa-download"></i> Download Resume
             </a>
           </div>
@@ -105,67 +85,88 @@
           <!-- Technical Skills -->
           <div class="reveal">
             <h2>Technical Skills</h2>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <i class="fas fa-server"></i><span>Java Spring Boot</span>
+            <div class="skills-proficiency">
+
+              <div class="skill-category">
+                <p class="skill-category-title">Backend</p>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">Java Spring Boot</span><span class="skill-bar-pct">92%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:92%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">Python FastAPI</span><span class="skill-bar-pct">88%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:88%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">PostgreSQL / MySQL</span><span class="skill-bar-pct">85%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:85%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">MongoDB</span><span class="skill-bar-pct">76%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:76%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">RabbitMQ</span><span class="skill-bar-pct">70%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:70%"></div></div>
+                </div>
               </div>
-              <div class="skill-item">
-                <i class="fas fa-bolt"></i><span>Python FastAPI</span>
+
+              <div class="skill-category">
+                <p class="skill-category-title">Frontend &amp; Mobile</p>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">HTML5 / CSS3</span><span class="skill-bar-pct">90%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:90%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">JavaScript</span><span class="skill-bar-pct">80%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">React / Next.js</span><span class="skill-bar-pct">74%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:74%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">Flutter</span><span class="skill-bar-pct">66%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:66%"></div></div>
+                </div>
               </div>
-              <div class="skill-item">
-                <i class="fas fa-database"></i><span>PostgreSQL</span>
+
+              <div class="skill-category">
+                <p class="skill-category-title">AI / ML</p>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">Python (Data / AI)</span><span class="skill-bar-pct">90%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:90%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">Machine Learning</span><span class="skill-bar-pct">76%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:76%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">Deep Learning</span><span class="skill-bar-pct">68%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:68%"></div></div>
+                </div>
               </div>
-              <div class="skill-item">
-                <i class="fas fa-box"></i><span>Docker</span>
+
+              <div class="skill-category">
+                <p class="skill-category-title">DevOps &amp; Tools</p>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">Git &amp; GitHub</span><span class="skill-bar-pct">92%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:92%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">Docker</span><span class="skill-bar-pct">82%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:82%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">C++</span><span class="skill-bar-pct">73%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:73%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header"><span class="skill-bar-name">Cloud Basics</span><span class="skill-bar-pct">62%</span></div>
+                  <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:62%"></div></div>
+                </div>
               </div>
-              <div class="skill-item">
-                <i class="fas fa-envelope"></i><span>RabbitMQ</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-python"></i><span>Python</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-code"></i><span>C++</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-js-square"></i><span>JavaScript</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-java"></i><span>Java</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-html5"></i><span>HTML5</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-css3-alt"></i><span>CSS3</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-react"></i><span>React</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-node"></i><span>Node.js</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-mobile-alt"></i><span>Flutter</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-robot"></i><span>AI &amp; ML</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-brain"></i><span>Deep Learning</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-database"></i><span>MySQL</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-server"></i><span>MongoDB</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-git-alt"></i><span>Git &amp; GitHub</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-cloud"></i><span>Cloud Basics</span>
-              </div>
+
             </div>
           </div>
 
@@ -180,16 +181,8 @@
                 </div>
                 <p class="exp-company">Sarwz Technology</p>
                 <ul class="exp-bullets">
-                  <li>
-                    Building full stack web applications with integrated AI
-                    capabilities including LLM-based systems, chatbots, and
-                    automation pipelines..
-                  </li>
-                  <li>
-                    Working across frontend, backend, REST APIs, and databases
-                    while deploying on cloud infrastructure and optimizing
-                    performance across the stack..
-                  </li>
+                  <li>Building full stack web applications with integrated AI capabilities including LLM-based systems, chatbots, and automation pipelines.</li>
+                  <li>Working across frontend, backend, REST APIs, and databases while deploying on cloud infrastructure and optimizing performance across the stack.</li>
                 </ul>
               </article>
 
@@ -198,29 +191,13 @@
                   <h3>Head, Debugging Competition Module</h3>
                   <span class="exp-badge">Sep – Oct 2025</span>
                 </div>
-                <p class="exp-company">
-                  FAST University — Coder's Cup 25 (ACM Event)
-                </p>
+                <p class="exp-company">FAST University — Coder's Cup 25 (ACM Event)</p>
                 <ul class="exp-bullets">
-                  <li>
-                    Led full-stack development of a debugging competition
-                    platform.
-                  </li>
-                  <li>
-                    Designed REST APIs using FastAPI and built frontend with
-                    Next.js.
-                  </li>
-                  <li>
-                    Integrated Piston API for multi-language code execution and
-                    evaluation.
-                  </li>
-                  <li>
-                    Implemented automated scoring, hint penalties, and real-time
-                    progress tracking.
-                  </li>
-                  <li>
-                    Managed testing, deployment, and live competition execution.
-                  </li>
+                  <li>Led full-stack development of a debugging competition platform.</li>
+                  <li>Designed REST APIs using FastAPI and built frontend with Next.js.</li>
+                  <li>Integrated Piston API for multi-language code execution and evaluation.</li>
+                  <li>Implemented automated scoring, hint penalties, and real-time progress tracking.</li>
+                  <li>Managed testing, deployment, and live competition execution.</li>
                 </ul>
               </article>
 
@@ -231,14 +208,8 @@
                 </div>
                 <p class="exp-company">FAST University — ProCom 2025</p>
                 <ul class="exp-bullets">
-                  <li>
-                    Developed a real-time simulation system using Python and
-                    Pygame.
-                  </li>
-                  <li>
-                    Implemented interactive controls for dynamic climate and
-                    environment variables.
-                  </li>
+                  <li>Developed a real-time simulation system using Python and Pygame.</li>
+                  <li>Implemented interactive controls for dynamic climate and environment variables.</li>
                 </ul>
               </article>
             </div>
@@ -248,74 +219,52 @@
         <!-- Sidebar -->
         <div class="about-sidebar">
           <div class="sidebar-card reveal">
-            <p class="sidebar-card-title">Profile</p>
-            <img
-              class="sidebar-profile-img"
-              src="../images/profile.jpg"
-              alt="Aisha Jalil"
-            />
+            <p class="sidebar-card-title">// Profile</p>
+            <img class="sidebar-profile-img" src="../images/profile.jpg" alt="Aisha Jalil" />
             <p class="sidebar-name">Aisha Jalil</p>
             <p class="sidebar-role">Backend Software Engineer</p>
             <div class="sidebar-info">
               <div class="sidebar-info-item">
-                <i class="fas fa-university"></i>
-                <span>FAST-NUCES</span>
+                <i class="fas fa-university"></i><span>FAST-NUCES</span>
               </div>
               <div class="sidebar-info-item">
-                <i class="fas fa-star"></i>
-                <span>3.65 CGPA</span>
+                <i class="fas fa-star"></i><span>3.65 CGPA</span>
               </div>
               <div class="sidebar-info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Karachi, Pakistan</span>
+                <i class="fas fa-map-marker-alt"></i><span>Karachi, Pakistan</span>
               </div>
               <div class="sidebar-info-item">
-                <i class="fas fa-envelope"></i>
-                <span>aishajalil387@gmail.com</span>
+                <i class="fas fa-envelope"></i><span>aishajalil387@gmail.com</span>
               </div>
             </div>
           </div>
 
           <div class="sidebar-card reveal">
-            <p class="sidebar-card-title">Links</p>
-            <div style="display: flex; flex-direction: column; gap: 0.6rem">
-              <a
-                href="https://github.com/AishaJalil"
-                target="_blank"
-                class="btn cta-ghost"
-                style="justify-content: flex-start; gap: 0.6rem"
-                ><i class="fab fa-github"></i> GitHub</a
-              >
-              <a
-                href="https://www.linkedin.com/in/aisha-jalil"
-                target="_blank"
-                class="btn cta-ghost"
-                style="justify-content: flex-start; gap: 0.6rem"
-                ><i class="fab fa-linkedin-in"></i> LinkedIn</a
-              >
-              <a
-                href="https://www.upwork.com/freelancers/~01e3a2f156e42651ad?viewMode=1"
-                target="_blank"
-                class="btn cta-ghost"
-                style="justify-content: flex-start; gap: 0.6rem"
-                ><i class="fab fa-upwork"></i> UpWork</a
-              >
+            <p class="sidebar-card-title">// Links</p>
+            <div style="display:flex;flex-direction:column;gap:0.6rem">
+              <a href="https://github.com/AishaJalil" target="_blank" class="btn cta-ghost"
+                 style="justify-content:flex-start;gap:0.6rem">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/aisha-jalil" target="_blank" class="btn cta-ghost"
+                 style="justify-content:flex-start;gap:0.6rem">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="https://www.upwork.com/freelancers/~01e3a2f156e42651ad?viewMode=1" target="_blank" class="btn cta-ghost"
+                 style="justify-content:flex-start;gap:0.6rem">
+                <i class="fab fa-upwork"></i> UpWork
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a class="footer-logo" href="../index.html"
-            >Aisha Jalil<span class="accent">.</span></a
-          >
-          <p class="footer-tagline">
-            Building reliable backends, clear APIs, and scalable systems.
-          </p>
+          <a class="footer-logo" href="../index.html">Aisha Jalil<span class="accent">.</span></a>
+          <p class="footer-tagline">Building reliable backends, clear APIs, and scalable systems.</p>
         </div>
         <nav>
           <p class="footer-nav-title">Navigation</p>
@@ -324,60 +273,79 @@
             <a href="projects.html">Projects</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a
-              href="../resume/Aisha_Jalil_Resume.pdf"
-              target="_blank"
-              rel="noopener"
-              >Resume</a
-            >
+            <a href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener">Resume</a>
           </div>
         </nav>
         <div>
           <p class="footer-social-title">Connect</p>
           <div class="footer-social-links">
-            <a
-              class="footer-social-link"
-              href="https://github.com/AishaJalil"
-              target="_blank"
-              aria-label="GitHub"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              class="footer-social-link"
-              href="https://www.linkedin.com/in/aisha-jalil"
-              target="_blank"
-              aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              class="footer-social-link"
-              href="mailto:aishajalil387@gmail.com"
-              aria-label="Email"
-              ><i class="fas fa-envelope"></i
-            ></a>
+            <a class="footer-social-link" href="https://github.com/AishaJalil" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a class="footer-social-link" href="https://www.linkedin.com/in/aisha-jalil" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="footer-social-link" href="mailto:aishajalil387@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
       </div>
       <div class="container footer-bottom">
         <p>&copy; 2025 Aisha Jalil. All rights reserved.</p>
-        <p class="footer-bottom-right">
-          Crafted with <span class="accent">♥</span> in Karachi
-        </p>
+        <p class="footer-bottom-right">Crafted with <span class="accent">♥</span> in Karachi</p>
       </div>
     </footer>
 
     <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((el) => {
-            if (el.isIntersecting) el.target.classList.add("visible");
-          });
-        },
-        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
-      );
-      document
-        .querySelectorAll(".reveal")
-        .forEach((el) => observer.observe(el));
+      const dot = document.getElementById('cursorDot');
+      const ring = document.getElementById('cursorRing');
+      let mx=0,my=0,rx=0,ry=0;
+      document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+      (function tick(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tick);})();
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      // ─── Holographic Shimmer on sidebar cards ───────────────
+      document.querySelectorAll('.sidebar-card').forEach(card => {
+        const s = document.createElement('span');
+        s.className = 'card-shimmer';
+        card.appendChild(s);
+        card.addEventListener('mousemove', e => {
+          const r = card.getBoundingClientRect();
+          s.style.setProperty('--cx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+          s.style.setProperty('--cy', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+          s.classList.add('active');
+        });
+        card.addEventListener('mouseleave', () => s.classList.remove('active'));
+      });
+
+      // ─── Skill bar fill animation ────────────────────────────
+      const barObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.querySelectorAll('.skill-bar-fill').forEach(b => b.classList.add('animated'));
+          barObs.unobserve(e.target);
+        });
+      }, { threshold: 0.25 });
+      document.querySelectorAll('.skill-category').forEach(el => barObs.observe(el));
+
+      // ─── Page fade transition ────────────────────────────────
+      (function() {
+        document.body.style.opacity = '0';
+        window.addEventListener('load', () => { document.body.style.opacity = '1'; });
+        window.addEventListener('pageshow', e => { if (e.persisted) document.body.style.opacity = '1'; });
+        document.addEventListener('click', e => {
+          const a = e.target.closest('a[href]');
+          if (!a) return;
+          const href = a.getAttribute('href') || '';
+          if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.endsWith('.pdf')) return;
+          if (a.target === '_blank' || a.download) return;
+          if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+          try { if (new URL(a.href, location.href).hostname !== location.hostname && location.hostname !== '') return; }
+          catch(_) { return; }
+          e.preventDefault();
+          document.body.style.opacity = '0';
+          setTimeout(() => { location.href = a.href; }, 290);
+        });
+      })();
     </script>
   </body>
 </html>

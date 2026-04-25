@@ -7,16 +7,20 @@
   <meta name="description" content="Certifications and recognitions by Aisha Jalil from competitions and technical events." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo"><a href="../index.html">Aisha Jalil<span class="accent">.</span></a></div>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.main-nav').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="Toggle navigation"
+        onclick="document.querySelector('.main-nav').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
       <nav class="main-nav">
@@ -26,13 +30,18 @@
         <a class="nav-item active" href="certifications.html">Certifications</a>
         <a class="nav-item" href="achievements.html">Achievements</a>
         <a class="nav-item" href="contact.html">Contact</a>
-        <a class="nav-item nav-resume" href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener"><i class="fas fa-download" style="font-size:0.75rem"></i> Resume</a>
+        <a class="nav-item nav-resume" href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener">
+          <i class="fas fa-download" style="font-size:0.75rem"></i> Resume
+        </a>
       </nav>
     </div>
   </header>
 
   <div class="page-hero">
     <div class="container">
+      <a class="back-btn animate-fade-up delay-1" href="../index.html">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
       <div class="section-label animate-fade-up delay-1">Credentials</div>
       <h1 class="animate-fade-up delay-2">Certifications</h1>
       <p class="animate-fade-up delay-3">Recognitions and achievements from competitions, events, and technical programs.</p>
@@ -127,10 +136,61 @@
   </footer>
 
   <script>
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+    (function tick(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tick);})();
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ─── 3D Tilt + Holographic Shimmer ────────────────────────────
+    document.querySelectorAll('.cert-page-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(900px) rotateY(${x * 10}deg) rotateX(${-y * 6}deg) translateY(-5px)`;
+        card.style.transition = 'none';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.16,1,0.3,1), border-color 0.3s ease, box-shadow 0.3s ease';
+      });
+      const s = document.createElement('span');
+      s.className = 'card-shimmer';
+      card.appendChild(s);
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        s.style.setProperty('--cx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+        s.style.setProperty('--cy', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+        s.classList.add('active');
+      });
+      card.addEventListener('mouseleave', () => s.classList.remove('active'));
+    });
+
+    // ─── Page fade transition ────────────────────────────────
+    (function() {
+      document.body.style.opacity = '0';
+      window.addEventListener('load', () => { document.body.style.opacity = '1'; });
+      window.addEventListener('pageshow', e => { if (e.persisted) document.body.style.opacity = '1'; });
+      document.addEventListener('click', e => {
+        const a = e.target.closest('a[href]');
+        if (!a) return;
+        const href = a.getAttribute('href') || '';
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.endsWith('.pdf')) return;
+        if (a.target === '_blank' || a.download) return;
+        if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+        try { if (new URL(a.href, location.href).hostname !== location.hostname && location.hostname !== '') return; }
+        catch(_) { return; }
+        e.preventDefault();
+        document.body.style.opacity = '0';
+        setTimeout(() => { location.href = a.href; }, 290);
+      });
+    })();
   </script>
 </body>
 </html>

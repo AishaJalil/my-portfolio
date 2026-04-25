@@ -1,173 +1,392 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Aisha Jalil</title>
-  <meta name="description" content="Contact Aisha Jalil — backend software engineer. Let's discuss backend systems, APIs, and scalable architectures." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Aisha Jalil</title>
+    <meta
+      name="description"
+      content="Contact Aisha Jalil — backend software engineer. Let's discuss backend systems, APIs, and scalable architectures."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo"><a href="../index.html">Aisha Jalil<span class="accent">.</span></a></div>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.main-nav').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav">
-        <a class="nav-item" href="../index.html">Home</a>
-        <a class="nav-item" href="about.html">About</a>
-        <a class="nav-item" href="projects.html">Projects</a>
-        <a class="nav-item" href="certifications.html">Certifications</a>
-        <a class="nav-item" href="achievements.html">Achievements</a>
-        <a class="nav-item active" href="contact.html">Contact</a>
-        <a class="nav-item nav-resume" href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener"><i class="fas fa-download" style="font-size:0.75rem"></i> Resume</a>
-      </nav>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <a href="../index.html">Aisha Jalil<span class="accent">.</span></a>
+        </div>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          onclick="document.querySelector('.main-nav').classList.toggle('open')"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav">
+          <a class="nav-item" href="../index.html">Home</a>
+          <a class="nav-item" href="about.html">About</a>
+          <a class="nav-item" href="projects.html">Projects</a>
+          <a class="nav-item" href="certifications.html">Certifications</a>
+          <a class="nav-item" href="achievements.html">Achievements</a>
+          <a class="nav-item active" href="contact.html">Contact</a>
+          <a
+            class="nav-item nav-resume"
+            href="../resume/Aisha_Jalil_Resume.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fas fa-download" style="font-size: 0.75rem"></i> Resume
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-hero">
+      <div class="container">
+        <a class="back-btn animate-fade-up delay-1" href="../index.html">
+          <i class="fas fa-arrow-left"></i> Back
+        </a>
+        <div class="section-label animate-fade-up delay-1">Get In Touch</div>
+        <h1 class="animate-fade-up delay-2">Let's Connect</h1>
+        <p class="animate-fade-up delay-3">
+          I'm responsive on email and LinkedIn. Always open to interesting
+          projects and conversations.
+        </p>
+      </div>
     </div>
-  </header>
 
-  <div class="page-hero">
-    <div class="container">
-      <div class="section-label animate-fade-up delay-1">Get In Touch</div>
-      <h1 class="animate-fade-up delay-2">Let's Connect</h1>
-      <p class="animate-fade-up delay-3">I'm responsive on email and LinkedIn. Always open to interesting projects and conversations.</p>
-    </div>
-  </div>
+    <section class="contact-body section-pad">
+      <div class="container contact-grid">
+        <!-- Info Side -->
+        <div class="contact-info reveal">
+          <div class="section-label">Direct Contact</div>
+          <h2>Reach out anytime</h2>
+          <p>
+            Whether you have a project in mind, want to collaborate, or just
+            want to say hi — my inbox is always open.
+          </p>
 
-  <section class="contact-body section-pad">
-    <div class="container contact-grid">
-
-      <!-- Info Side -->
-      <div class="contact-info reveal">
-        <div class="section-label">Direct Contact</div>
-        <h2>Reach out anytime</h2>
-        <p>Whether you have a project in mind, want to collaborate, or just want to say hi — my inbox is always open.</p>
-
-        <div class="contact-info-items">
-          <div class="contact-info-item">
-            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-            <div class="contact-info-text">
-              <strong>Email</strong>
-              <a href="mailto:aishajalil387@gmail.com">aishajalil387@gmail.com</a>
+          <div class="contact-info-items">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info-text">
+                <strong>Email</strong>
+                <span class="copy-email-wrap">
+                  <a href="mailto:aishajalil387@gmail.com">aishajalil387@gmail.com</a>
+                  <button class="copy-email-btn" onclick="copyEmail(this)" aria-label="Copy email address">
+                    <i class="fas fa-copy"></i>
+                    <span class="copy-tooltip">Copied!</span>
+                  </button>
+                </span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="contact-info-text">
+                <strong>LinkedIn</strong>
+                <a
+                  href="https://www.linkedin.com/in/aisha-jalil"
+                  target="_blank"
+                  rel="noopener"
+                  >linkedin.com/in/aisha-jalil</a
+                >
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-info-text">
+                <strong>GitHub</strong>
+                <a
+                  href="https://github.com/AishaJalil"
+                  target="_blank"
+                  rel="noopener"
+                  >github.com/AishaJalil</a
+                >
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-info-text">
+                <strong>Location</strong>
+                <span>Karachi, Pakistan</span>
+              </div>
             </div>
           </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon"><i class="fab fa-linkedin-in"></i></div>
-            <div class="contact-info-text">
-              <strong>LinkedIn</strong>
-              <a href="https://www.linkedin.com/in/aisha-jalil" target="_blank" rel="noopener">linkedin.com/in/aisha-jalil</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon"><i class="fab fa-github"></i></div>
-            <div class="contact-info-text">
-              <strong>GitHub</strong>
-              <a href="https://github.com/AishaJalil" target="_blank" rel="noopener">github.com/AishaJalil</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="contact-info-text">
-              <strong>Location</strong>
-              <span>Karachi, Pakistan</span>
-            </div>
+
+          <div class="contact-social">
+            <a
+              class="social-link"
+              href="https://github.com/AishaJalil"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/in/aisha-jalil"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              class="social-link"
+              href="https://vercel.com/aisha-jalils-projects"
+              target="_blank"
+              aria-label="Vercel"
+              ><i class="fa-solid fa-globe"></i
+            ></a>
+            <a
+              class="social-link"
+              href="https://huggingface.co/Aisha-Jalil-990"
+              target="_blank"
+              aria-label="HuggingFace"
+              ><i class="fa-solid fa-flask"></i
+            ></a>
           </div>
         </div>
 
-        <div class="contact-social">
-          <a class="social-link" href="https://github.com/AishaJalil" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a class="social-link" href="https://www.linkedin.com/in/aisha-jalil" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a class="social-link" href="https://vercel.com/aisha-jalils-projects" target="_blank" aria-label="Vercel"><i class="fa-solid fa-globe"></i></a>
-          <a class="social-link" href="https://huggingface.co/Aisha-Jalil-990" target="_blank" aria-label="HuggingFace"><i class="fa-solid fa-flask"></i></a>
+        <!-- Form Side -->
+        <div class="contact-form-wrap reveal">
+          <p class="contact-form-title">Send a Message</p>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jane Smith"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Project collaboration..."
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell me about your project or inquiry..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn cta-primary" id="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <p
+              id="form-status"
+              style="margin-top: 1rem; font-size: 0.9rem; display: none"
+            ></p>
+          </form>
         </div>
       </div>
+    </section>
 
-      <!-- Form Side -->
-      <div class="contact-form-wrap reveal">
-        <p class="contact-form-title">Send a Message</p>
-        <form onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Project collaboration..." />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." required></textarea>
-          </div>
-          <button type="submit" class="btn cta-primary" id="submit-btn">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-          <p id="form-status" style="margin-top:1rem;font-size:0.9rem;display:none"></p>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a class="footer-logo" href="../index.html">Aisha Jalil<span class="accent">.</span></a>
-        <p class="footer-tagline">Building reliable backends, clear APIs, and scalable systems.</p>
-      </div>
-      <nav>
-        <p class="footer-nav-title">Navigation</p>
-        <div class="footer-nav">
-          <a href="../index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html">Contact</a>
-          <a href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="../index.html"
+            >Aisha Jalil<span class="accent">.</span></a
+          >
+          <p class="footer-tagline">
+            Building reliable backends, clear APIs, and scalable systems.
+          </p>
         </div>
-      </nav>
-      <div>
-        <p class="footer-social-title">Connect</p>
-        <div class="footer-social-links">
-          <a class="footer-social-link" href="https://github.com/AishaJalil" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a class="footer-social-link" href="https://www.linkedin.com/in/aisha-jalil" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a class="footer-social-link" href="mailto:aishajalil387@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <nav>
+          <p class="footer-nav-title">Navigation</p>
+          <div class="footer-nav">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a
+              href="../resume/Aisha_Jalil_Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              >Resume</a
+            >
+          </div>
+        </nav>
+        <div>
+          <p class="footer-social-title">Connect</p>
+          <div class="footer-social-links">
+            <a
+              class="footer-social-link"
+              href="https://github.com/AishaJalil"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              class="footer-social-link"
+              href="https://www.linkedin.com/in/aisha-jalil"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              class="footer-social-link"
+              href="mailto:aishajalil387@gmail.com"
+              aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2025 Aisha Jalil. All rights reserved.</p>
-      <p class="footer-bottom-right">Crafted with <span class="accent">♥</span> in Karachi</p>
-    </div>
-  </footer>
+      <div class="container footer-bottom">
+        <p>&copy; 2025 Aisha Jalil. All rights reserved.</p>
+        <p class="footer-bottom-right">
+          Crafted with <span class="accent">♥</span> in Karachi
+        </p>
+      </div>
+    </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    <script>
+      const dot = document.getElementById("cursorDot");
+      const ring = document.getElementById("cursorRing");
+      let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        dot.style.left = mx + "px";
+        dot.style.top = my + "px";
+      });
+      (function tick() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + "px";
+        ring.style.top = ry + "px";
+        requestAnimationFrame(tick);
+      })();
 
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = document.getElementById('submit-btn');
-      const status = document.getElementById('form-status');
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-        btn.style.background = 'var(--accent)';
-        status.style.display = 'block';
-        status.style.color = 'var(--accent)';
-        status.textContent = "Thanks for your message! I'll get back to you soon.";
-      }, 1500);
-    }
-  </script>
-</body>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((el) => {
+            if (el.isIntersecting) el.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // ─── Copy email ──────────────────────────────────────────
+      function copyEmail(btn) {
+        navigator.clipboard.writeText('aishajalil387@gmail.com').then(() => {
+          const tip = btn.querySelector('.copy-tooltip');
+          tip.classList.add('show');
+          setTimeout(() => tip.classList.remove('show'), 1800);
+        });
+      }
+
+      // ─── Page fade transition ────────────────────────────────
+      (function() {
+        document.body.style.opacity = '0';
+        window.addEventListener('load', () => { document.body.style.opacity = '1'; });
+        window.addEventListener('pageshow', e => { if (e.persisted) document.body.style.opacity = '1'; });
+        document.addEventListener('click', e => {
+          const a = e.target.closest('a[href]');
+          if (!a) return;
+          const href = a.getAttribute('href') || '';
+          if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.endsWith('.pdf')) return;
+          if (a.target === '_blank' || a.download) return;
+          if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+          try { if (new URL(a.href, location.href).hostname !== location.hostname && location.hostname !== '') return; }
+          catch(_) { return; }
+          e.preventDefault();
+          document.body.style.opacity = '0';
+          setTimeout(() => { location.href = a.href; }, 290);
+        });
+      })();
+
+      async function handleSubmit(e) {
+        e.preventDefault();
+        const btn = document.getElementById("submit-btn");
+        const status = document.getElementById("form-status");
+
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        status.style.display = "none";
+
+        const formData = new FormData(e.target);
+        // Replace the value below with your key from https://web3forms.com
+        formData.append("access_key", "dd2b6eaf-66c6-4b09-b13d-bbf47a34c279");
+        formData.append(
+          "subject",
+          `Portfolio contact: ${formData.get("subject") || "New message"}`,
+        );
+        formData.append("from_name", formData.get("name"));
+
+        try {
+          const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+          });
+          const data = await res.json();
+
+          if (data.success) {
+            btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+            btn.style.background =
+              "linear-gradient(135deg, var(--accent), var(--accent-3))";
+            status.style.display = "block";
+            status.style.color = "var(--accent)";
+            status.textContent =
+              "Thanks for your message! I'll get back to you soon.";
+            e.target.reset();
+          } else {
+            throw new Error(data.message || "Submission failed");
+          }
+        } catch (err) {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+          status.style.display = "block";
+          status.style.color = "#ef4444";
+          status.textContent =
+            "Failed to send. Please email me directly at aishajalil387@gmail.com";
+        }
+      }
+    </script>
+  </body>
 </html>

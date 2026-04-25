@@ -4,66 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aisha Jalil | Backend Software Engineer</title>
-    <meta
-      name="description"
-      content="Portfolio of Aisha Jalil — backend-focused software engineer specializing in Java Spring Boot, Python/FastAPI, distributed systems, and scalable APIs."
-    />
+    <meta name="description" content="Portfolio of Aisha Jalil — backend-focused software engineer specializing in Java Spring Boot, Python/FastAPI, distributed systems, and scalable APIs." />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aisha Jalil | Backend Software Engineer" />
+    <meta property="og:description" content="Backend engineer specializing in Java Spring Boot, FastAPI, and scalable distributed systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aisha Jalil | Backend Software Engineer" />
+    <meta name="twitter:description" content="Backend engineer specializing in Java Spring Boot, FastAPI, and scalable distributed systems." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- =========================================================
-     Header
-  ========================================================= -->
+
+    <!-- Custom cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- ===================================================
+         Header
+    =================================================== -->
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo">
           <a href="index.html">Aisha Jalil<span class="accent">.</span></a>
         </div>
-        <button
-          class="nav-toggle"
-          aria-label="Toggle navigation"
-          onclick="document.querySelector('.main-nav').classList.toggle('open')"
-        >
+        <button class="nav-toggle" aria-label="Toggle navigation"
+          onclick="document.querySelector('.main-nav').classList.toggle('open')">
           <span></span><span></span><span></span>
         </button>
         <nav class="main-nav">
           <a class="nav-item active" href="index.html">Home</a>
           <a class="nav-item" href="pages/about.html">About</a>
           <a class="nav-item" href="pages/projects.html">Projects</a>
-          <a class="nav-item" href="pages/certifications.html"
-            >Certifications</a
-          >
+          <a class="nav-item" href="pages/certifications.html">Certifications</a>
           <a class="nav-item" href="pages/achievements.html">Achievements</a>
           <a class="nav-item" href="pages/contact.html">Contact</a>
-          <a
-            class="nav-item nav-resume"
-            href="resume/Aisha_Jalil_Resume.pdf"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fas fa-download" style="font-size: 0.75rem"></i> Resume
+          <a class="nav-item nav-resume" href="resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener">
+            <i class="fas fa-download" style="font-size:0.75rem"></i> Resume
           </a>
         </nav>
       </div>
     </header>
 
-    <!-- =========================================================
-     Hero
-  ========================================================= -->
+    <!-- ===================================================
+         Hero
+    =================================================== -->
     <section class="hero">
+      <canvas id="hero-canvas"></canvas>
+
+      <!-- Floating orbs -->
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+
       <div class="container hero-inner">
         <div class="hero-content">
+          <!-- Currently building ticker -->
+          <div class="building-ticker animate-fade-up delay-1">
+            <span class="ticker-dot"></span>
+            <span class="ticker-label">Now&nbsp;</span>
+            <span class="ticker-text">Building AI platform · Sarwz Technology</span>
+          </div>
+
           <div class="hero-badge animate-fade-up delay-1">
             <span class="dot"></span>
             <span>Open to opportunities</span>
@@ -74,15 +83,13 @@
           </h1>
 
           <p class="hero-subtitle animate-fade-up delay-3">
-            <strong>Backend Software Engineer</strong> — Java Spring Boot &amp;
-            Python FastAPI
+            <strong><span id="typewriter-role">Backend Engineer</span><span class="typewriter-cursor"></span></strong> — Java Spring Boot &amp; Python FastAPI
           </p>
 
           <p class="hero-desc animate-fade-up delay-3">
-            I design and build secure, scalable backend systems and APIs. My
-            focus is on domain modeling, clean architecture, reliable data
-            pipelines, and production readiness: observability, testing, CI/CD,
-            and cloud-native deployment.
+            I design and build secure, scalable backend systems and APIs. My focus is on
+            domain modeling, clean architecture, reliable data pipelines, and production
+            readiness: observability, testing, CI/CD, and cloud-native deployment.
           </p>
 
           <div class="hero-actions animate-fade-up delay-4">
@@ -92,55 +99,38 @@
             <a href="pages/contact.html" class="btn cta-outline">
               <i class="fas fa-paper-plane"></i> Contact Me
             </a>
-            <a
-              href="resume/Aisha_Jalil_Resume.pdf"
-              target="_blank"
-              rel="noopener"
-              class="btn cta-ghost"
-            >
+            <a href="resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener" class="btn cta-ghost">
               <i class="fas fa-download"></i> Resume
             </a>
           </div>
 
           <div class="hero-social animate-fade-up delay-5">
-            <a
-              class="social-link"
-              href="https://github.com/AishaJalil"
-              target="_blank"
-              aria-label="GitHub"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              class="social-link"
-              href="https://www.linkedin.com/in/aisha-jalil"
-              target="_blank"
-              aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              class="social-link"
-              href="https://www.upwork.com/freelancers/~01e3a2f156e42651ad?viewMode=1"
-              target="_blank"
-              aria-label="UpWork"
-              ><i class="fab fa-upwork"></i
-            ></a>
+            <a class="social-link" href="https://github.com/AishaJalil" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/aisha-jalil" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="social-link" href="https://www.upwork.com/freelancers/~01e3a2f156e42651ad?viewMode=1" target="_blank" aria-label="UpWork">
+              <i class="fab fa-upwork"></i>
+            </a>
           </div>
         </div>
 
-        <div class="hero-card animate-fade-up delay-4">
-          <p class="hero-card-title">Quick Stats</p>
+        <div class="hero-card animate-fade-up delay-4" id="statsCard">
+          <p class="hero-card-title">// Quick Stats</p>
           <div class="stat-item">
-            <div class="stat-num">3.65</div>
+            <div class="stat-num" data-target="3.65">3.65</div>
             <div class="stat-label">CGPA at FAST-NUCES</div>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <div class="stat-num">10+</div>
+            <div class="stat-num" data-target="10" data-suffix="+">10+</div>
             <div class="stat-label">Projects Built</div>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <div class="stat-num">3×</div>
+            <div class="stat-num" data-target="5" data-suffix="×">5×</div>
             <div class="stat-label">Dean's Honor List</div>
           </div>
         </div>
@@ -148,25 +138,23 @@
 
       <div class="scroll-indicator">
         <span>SCROLL</span>
-        <div class="scroll-arrow"></div>
+        <div class="scroll-line"></div>
       </div>
     </section>
 
-    <!-- =========================================================
-     About Preview
-  ========================================================= -->
+    <!-- ===================================================
+         About Preview
+    =================================================== -->
     <section class="about-preview section-pad">
       <div class="container about-preview-grid">
         <div class="about-preview-content reveal">
           <div class="section-label">About Me</div>
           <h2>Building systems that scale &amp; perform</h2>
           <p>
-            I'm a Computer Science student at FAST-NUCES passionate about
-            backend architecture, AI, and data-driven problem solving. I
-            specialize in
-            <strong style="color: var(--text)"
-              >Java Spring Boot, FastAPI, PostgreSQL</strong
-            >, and modern cloud-native stacks.
+            I'm a Computer Science student at FAST-NUCES passionate about backend
+            architecture, AI, and data-driven problem solving. I specialize in
+            <strong style="color:var(--text)">Java Spring Boot, FastAPI, PostgreSQL</strong>,
+            and modern cloud-native stacks.
           </p>
           <div class="about-tags">
             <span class="tag">Java Spring Boot</span>
@@ -175,23 +163,29 @@
             <span class="tag">Docker</span>
             <span class="tag">React</span>
           </div>
-          <a href="pages/about.html" class="btn cta-outline"
-            >Learn More
-            <i class="fas fa-arrow-right" style="font-size: 0.8rem"></i
-          ></a>
+          <a href="pages/about.html" class="btn cta-outline">
+            Learn More <i class="fas fa-arrow-right" style="font-size:0.8rem"></i>
+          </a>
         </div>
+
         <div class="about-preview-visual reveal">
-          <div class="profile-frame">
-            <img src="images/profile.jpg" alt="Aisha Jalil" />
+          <div class="profile-ring profile-ring-1">
+            <div class="profile-ring-dot"></div>
+          </div>
+          <div class="profile-ring profile-ring-2"></div>
+          <div class="profile-frame-3d">
+            <div class="profile-frame">
+              <img src="images/profile.jpg" alt="Aisha Jalil" />
+            </div>
           </div>
           <div class="profile-accent">Dean's<br />List<br />3×</div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-     Featured Projects
-  ========================================================= -->
+    <!-- ===================================================
+         Featured Projects
+    =================================================== -->
     <section class="featured section-pad">
       <div class="container">
         <div class="featured-header reveal">
@@ -205,8 +199,8 @@
           </p>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card reveal">
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card reveal tilt-card">
             <div class="project-card-top"></div>
             <div class="project-card-content">
               <div class="project-number">01 — Backend</div>
@@ -216,20 +210,18 @@
                 customer/lead/deal workflows backed by PostgreSQL.
               </p>
               <div class="project-card-footer">
-                <a class="project-link" href="pages/projects.html#crm"
-                  >View Project <i class="fas fa-arrow-right"></i
-                ></a>
-                <div style="display: flex; gap: 0.4rem">
-                  <span class="tag" style="font-size: 0.65rem"
-                    >Spring Boot</span
-                  >
-                  <span class="tag" style="font-size: 0.65rem">PostgreSQL</span>
+                <a class="project-link" href="pages/projects.html#crm">
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
+                <div style="display:flex;gap:0.4rem">
+                  <span class="tag" style="font-size:0.62rem">Spring Boot</span>
+                  <span class="tag" style="font-size:0.62rem">PostgreSQL</span>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal tilt-card">
             <div class="project-card-top"></div>
             <div class="project-card-content">
               <div class="project-number">02 — Full-Stack</div>
@@ -239,18 +231,18 @@
                 scoring, and multi-language code execution via Piston API.
               </p>
               <div class="project-card-footer">
-                <a class="project-link" href="pages/projects.html#codefu"
-                  >View Project <i class="fas fa-arrow-right"></i
-                ></a>
-                <div style="display: flex; gap: 0.4rem">
-                  <span class="tag" style="font-size: 0.65rem">FastAPI</span>
-                  <span class="tag" style="font-size: 0.65rem">Next.js</span>
+                <a class="project-link" href="pages/projects.html#codefu">
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
+                <div style="display:flex;gap:0.4rem">
+                  <span class="tag" style="font-size:0.62rem">FastAPI</span>
+                  <span class="tag" style="font-size:0.62rem">Next.js</span>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal tilt-card">
             <div class="project-card-top"></div>
             <div class="project-card-content">
               <div class="project-number">03 — AI/ML</div>
@@ -260,12 +252,12 @@
                 Gemini-powered AI assistant and multilingual support.
               </p>
               <div class="project-card-footer">
-                <a class="project-link" href="pages/projects.html"
-                  >View Project <i class="fas fa-arrow-right"></i
-                ></a>
-                <div style="display: flex; gap: 0.4rem">
-                  <span class="tag" style="font-size: 0.65rem">Firebase</span>
-                  <span class="tag" style="font-size: 0.65rem">Gemini AI</span>
+                <a class="project-link" href="pages/projects.html">
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
+                <div style="display:flex;gap:0.4rem">
+                  <span class="tag" style="font-size:0.62rem">Firebase</span>
+                  <span class="tag" style="font-size:0.62rem">Gemini AI</span>
                 </div>
               </div>
             </div>
@@ -273,222 +265,243 @@
         </div>
 
         <div class="center-btn reveal">
-          <a href="pages/projects.html" class="btn cta-primary"
-            >See All Projects <i class="fas fa-arrow-right"></i
-          ></a>
+          <a href="pages/projects.html" class="btn cta-primary">
+            See All Projects <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-     Services
-  ========================================================= -->
+    <!-- ===================================================
+         Services
+    =================================================== -->
     <section class="services section-pad">
       <div class="container">
         <div class="services-header reveal">
           <div class="section-label">What I Do</div>
           <h2>Services &amp; Expertise</h2>
-          <p class="section-intro" style="margin-top: 0.75rem">
+          <p class="section-intro" style="margin-top:0.75rem">
             I craft innovative, high-quality solutions across web development,
-            mobile apps, AI, and data analytics — delivering scalable,
-            user-focused applications.
+            mobile apps, AI, and data analytics — delivering scalable, user-focused applications.
           </p>
         </div>
 
-        <div class="services-grid">
-          <article class="service-card reveal">
-            <div class="service-icon">
-              <i class="fa-solid fa-laptop-code"></i>
-            </div>
+        <div class="services-grid reveal-stagger">
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
             <h3>Web Development</h3>
-            <p>
-              Responsive, high-performance sites using HTML, CSS, JS &amp;
-              modern frameworks.
-            </p>
+            <p>Responsive, high-performance sites using HTML, CSS, JS &amp; modern frameworks.</p>
           </article>
-          <article class="service-card reveal">
-            <div class="service-icon">
-              <i class="fa-solid fa-mobile-screen-button"></i>
-            </div>
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
             <h3>App Development</h3>
-            <p>
-              Cross-platform mobile apps with Flutter for seamless user
-              experiences.
-            </p>
+            <p>Cross-platform mobile apps with Flutter for seamless user experiences.</p>
           </article>
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
             <h3>AI / ML Solutions</h3>
-            <p>
-              Custom models for NLP, predictive systems, and real-world AI
-              projects.
-            </p>
+            <p>Custom models for NLP, predictive systems, and real-world AI projects.</p>
           </article>
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon"><i class="fa-solid fa-database"></i></div>
             <h3>Data Analytics</h3>
-            <p>
-              Turning raw data into insights with visualization &amp;
-              interpretation tools.
-            </p>
+            <p>Turning raw data into insights with visualization &amp; interpretation tools.</p>
           </article>
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon"><i class="fa-solid fa-flask"></i></div>
             <h3>AI Research</h3>
-            <p>
-              Exploring neural networks &amp; deep learning to solve complex
-              challenges.
-            </p>
+            <p>Exploring neural networks &amp; deep learning to solve complex challenges.</p>
           </article>
-          <article class="service-card reveal">
-            <div class="service-icon">
-              <i class="fa-solid fa-lightbulb"></i>
-            </div>
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
             <h3>Prompt Engineering</h3>
-            <p>
-              Crafting optimized prompts for AI models to achieve precise,
-              impactful responses.
-            </p>
+            <p>Crafting optimized prompts for AI models to achieve precise, impactful responses.</p>
           </article>
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon"><i class="fa-brands fa-python"></i></div>
             <h3>Python Programming</h3>
-            <p>
-              Building robust scripts and applications for automation, AI, and
-              backend systems.
-            </p>
+            <p>Building robust scripts and applications for automation, AI, and backend systems.</p>
           </article>
-          <article class="service-card reveal">
-            <div class="service-icon">
-              <i class="fa-solid fa-network-wired"></i>
-            </div>
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
             <h3>API Integration</h3>
-            <p>
-              Developing efficient API integrations and workflow automations for
-              scalable systems.
-            </p>
+            <p>Developing efficient API integrations and workflow automations for scalable systems.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-     Certifications Preview
-  ========================================================= -->
+    <!-- ===================================================
+         GitHub Stats
+    =================================================== -->
+    <section class="github-stats section-pad">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">GitHub</div>
+          <h2>Code Activity</h2>
+          <p class="section-intro" style="margin-top:0.5rem">
+            Live stats from GitHub — repos, languages, and contribution streak.
+          </p>
+        </div>
+        <div class="github-stats-inner reveal">
+          <div class="github-stats-grid">
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=AishaJalil&show_icons=true&count_private=true&theme=transparent&title_color=00ffcc&icon_color=00ffcc&text_color=94a3b8&border_color=0a1628&bg_color=050d1a&border_radius=14&hide_border=false"
+              alt="Aisha Jalil GitHub Stats" height="165"
+              loading="lazy"
+            />
+            <img
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=AishaJalil&layout=compact&theme=transparent&title_color=00ffcc&text_color=94a3b8&border_color=0a1628&bg_color=050d1a&border_radius=14&hide=html,css&langs_count=8"
+              alt="Top Languages" height="165"
+              loading="lazy"
+            />
+          </div>
+          <div style="text-align:center">
+            <a href="https://github.com/AishaJalil" target="_blank" rel="noopener" class="github-more-link">
+              <i class="fab fa-github"></i>&nbsp;&nbsp;View full profile on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         Testimonials
+    =================================================== -->
+    <section class="testimonials section-pad">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">Testimonials</div>
+          <h2>What People Say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <!-- Replace with real quotes from colleagues / professors -->
+          <div class="testimonial-card reveal">
+            <p class="testimonial-text">
+              "Aisha delivered outstanding results on our platform — clean architecture, well-tested APIs, and zero shortcuts. Her backend instincts are sharp and she ships fast without compromising quality."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">ST</div>
+              <div>
+                <p class="testimonial-author-name">Sarwz Technology</p>
+                <p class="testimonial-author-role">Team Lead · Full-Stack Role</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <p class="testimonial-text">
+              "One of the strongest students in backend systems — her CRM project demonstrated real-world engineering judgment: domain modeling, proper auth flows, and production-grade structure."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">FA</div>
+              <div>
+                <p class="testimonial-author-name">FAST-NUCES</p>
+                <p class="testimonial-author-role">Faculty · Software Engineering Dept.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         Certifications Preview
+    =================================================== -->
     <section class="certifications section-pad">
       <div class="container">
         <div class="reveal">
           <div class="section-label">Credentials</div>
           <h2>Certifications</h2>
-          <p class="section-intro" style="margin-top: 0.5rem">
+          <p class="section-intro" style="margin-top:0.5rem">
             Recognitions from competitions, events, and technical programs.
           </p>
         </div>
-        <div class="certifications-grid">
-          <div class="cert-card reveal">
+        <div class="certifications-grid reveal-stagger">
+          <div class="cert-card">
             <i class="fa-solid fa-brain"></i>
             <h3>DataCamp — Understanding of Machine Learning</h3>
-            <p>
-              Foundational knowledge of ML algorithms and practical
-              implementation techniques.
-            </p>
+            <p>Foundational knowledge of ML algorithms and practical implementation techniques.</p>
           </div>
-          <div class="cert-card reveal">
+          <div class="cert-card">
             <i class="fa-solid fa-trophy"></i>
             <h3>Procom 2025 — Interstellar Intelligence</h3>
             <p>Designed the CS module for Procom 2025 at FAST University.</p>
           </div>
-          <div class="cert-card reveal">
+          <div class="cert-card">
             <i class="fa-solid fa-code"></i>
             <h3>Dev Day — Speed Programming</h3>
-            <p>
-              Organized by ACM at FAST University, showcasing rapid
-              problem-solving skills.
-            </p>
+            <p>Organized by ACM at FAST University, showcasing rapid problem-solving skills.</p>
           </div>
         </div>
         <div class="center-btn reveal">
-          <a href="pages/certifications.html" class="btn cta-outline"
-            >View All Certifications <i class="fas fa-arrow-right"></i
-          ></a>
+          <a href="pages/certifications.html" class="btn cta-outline">
+            View All Certifications <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-     Achievements Preview
-  ========================================================= -->
+    <!-- ===================================================
+         Achievements Preview
+    =================================================== -->
     <section class="achievements section-pad">
       <div class="container">
         <div class="reveal">
           <div class="section-label">Honors</div>
           <h2>Achievements &amp; Recognition</h2>
-          <p class="section-intro" style="margin-top: 0.5rem">
-            Academic recognition for consistent high performance at FAST
-            University.
+          <p class="section-intro" style="margin-top:0.5rem">
+            Academic recognition for consistent high performance at FAST University.
           </p>
         </div>
-        <div class="achievements-grid achievements-grid--home">
-          <article class="ach-card reveal">
+        <div class="achievements-grid achievements-grid--home reveal-stagger">
+          <article class="ach-card">
             <div class="ach-icon"><i class="fa-solid fa-medal"></i></div>
             <h3>Dean's List — Spring 2024</h3>
-            <p>
-              Recognized for outstanding academic achievement in upper-division
-              CS courses.
-            </p>
+            <p>Recognized for outstanding academic achievement in upper-division CS courses.</p>
           </article>
-          <article class="ach-card reveal">
+          <article class="ach-card">
             <div class="ach-icon"><i class="fa-solid fa-medal"></i></div>
             <h3>Dean's List — Fall 2023</h3>
             <p>Placed among top-performing Computer Science students.</p>
           </article>
-          <article class="ach-card reveal">
+          <article class="ach-card">
             <div class="ach-icon"><i class="fa-solid fa-medal"></i></div>
             <h3>Dean's List — Spring 2023</h3>
             <p>High academic standing across core CS coursework.</p>
           </article>
         </div>
         <div class="center-btn reveal">
-          <a href="pages/achievements.html" class="btn cta-outline"
-            >View All Achievements <i class="fas fa-arrow-right"></i
-          ></a>
+          <a href="pages/achievements.html" class="btn cta-outline">
+            View All Achievements <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-     CTA Banner
-  ========================================================= -->
+    <!-- ===================================================
+         CTA Banner
+    =================================================== -->
     <section class="cta-banner">
       <div class="container cta-banner-inner reveal">
-        <div
-          class="section-label"
-          style="justify-content: center; margin-bottom: 1rem"
-        >
+        <div class="section-label" style="justify-content:center;margin-bottom:1rem">
           Let's Collaborate
         </div>
         <h2>Let's Work Together</h2>
-        <p>
-          Looking for a backend engineer or collaborator for your next project?
-        </p>
-        <a href="pages/contact.html" class="btn cta-primary"
-          >Get In Touch <i class="fas fa-arrow-right"></i
-        ></a>
+        <p>Looking for a backend engineer or collaborator for your next project?</p>
+        <a href="pages/contact.html" class="btn cta-primary">
+          Get In Touch <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </section>
 
-    <!-- =========================================================
-     Footer
-  ========================================================= -->
+    <!-- ===================================================
+         Footer
+    =================================================== -->
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a class="footer-logo" href="index.html"
-            >Aisha Jalil<span class="accent">.</span></a
-          >
-          <p class="footer-tagline">
-            Building reliable backends, clear APIs, and scalable systems.
-          </p>
+          <a class="footer-logo" href="index.html">Aisha Jalil<span class="accent">.</span></a>
+          <p class="footer-tagline">Building reliable backends, clear APIs, and scalable systems.</p>
         </div>
         <nav>
           <p class="footer-nav-title">Navigation</p>
@@ -498,70 +511,318 @@
             <a href="pages/projects.html">Projects</a>
             <a href="pages/certifications.html">Certifications</a>
             <a href="pages/contact.html">Contact</a>
-            <a
-              href="resume/Aisha_Jalil_Resume.pdf"
-              target="_blank"
-              rel="noopener"
-              >Resume</a
-            >
+            <a href="resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener">Resume</a>
           </div>
         </nav>
         <div>
           <p class="footer-social-title">Connect</p>
           <div class="footer-social-links">
-            <a
-              class="footer-social-link"
-              href="https://github.com/AishaJalil"
-              target="_blank"
-              aria-label="GitHub"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              class="footer-social-link"
-              href="https://www.linkedin.com/in/aisha-jalil"
-              target="_blank"
-              aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              class="footer-social-link"
-              href="https://vercel.com/aisha-jalils-projects"
-              target="_blank"
-              aria-label="Vercel"
-              ><i class="fa-solid fa-globe"></i
-            ></a>
-            <a
-              class="footer-social-link"
-              href="mailto:aishajalil387@gmail.com"
-              aria-label="Email"
-              ><i class="fas fa-envelope"></i
-            ></a>
+            <a class="footer-social-link" href="https://github.com/AishaJalil" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a class="footer-social-link" href="https://www.linkedin.com/in/aisha-jalil" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="footer-social-link" href="https://vercel.com/aisha-jalils-projects" target="_blank" aria-label="Vercel"><i class="fa-solid fa-globe"></i></a>
+            <a class="footer-social-link" href="mailto:aishajalil387@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
       </div>
       <div class="container footer-bottom">
         <p>&copy; 2025 Aisha Jalil. All rights reserved.</p>
-        <p class="footer-bottom-right">
-          Crafted with <span class="accent">♥</span> in Karachi
-        </p>
+        <p class="footer-bottom-right">Crafted with <span class="accent">♥</span> in Karachi</p>
       </div>
     </footer>
 
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <script>
-      // Intersection Observer for reveal animations
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((el) => {
-            if (el.isIntersecting) {
-              el.target.classList.add("visible");
-            }
+    // ─── Custom Cursor ───────────────────────────────────────────
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top = my + 'px';
+    });
+    function animateCursor() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // ─── Three.js Hero Canvas — Floating Constellation / Neural Network ──
+    (function() {
+      const canvas = document.getElementById('hero-canvas');
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setClearColor(0x000000, 0);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 8;
+
+      function resize() {
+        const w = window.innerWidth, h = window.innerHeight;
+        renderer.setSize(w, h);
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      const nodes = [];
+      const SX = 13, SY = 8, SZ = 7;
+
+      for (let i = 0; i < 85; i++) {
+        const bright = Math.random() < 0.15;
+        const r      = bright ? 0.055 + Math.random() * 0.04 : 0.018 + Math.random() * 0.032;
+        const mesh   = new THREE.Mesh(
+          new THREE.SphereGeometry(r, 9, 9),
+          new THREE.MeshBasicMaterial({
+            color:       0x00ffcc,
+            transparent: true,
+            opacity:     bright ? 0.75 + Math.random() * 0.2 : 0.25 + Math.random() * 0.35
+          })
+        );
+        mesh.position.set(
+          (Math.random() - 0.5) * SX,
+          (Math.random() - 0.5) * SY,
+          (Math.random() - 0.5) * SZ
+        );
+        scene.add(mesh);
+        nodes.push({
+          mesh,
+          baseOpacity:  mesh.material.opacity,
+          pulseSpeed:   0.008 + Math.random() * 0.018,
+          pulseOffset:  Math.random() * Math.PI * 2,
+          bright,
+          vel: {
+            x: (Math.random() - 0.5) * 0.0025,
+            y: (Math.random() - 0.5) * 0.0025,
+            z: (Math.random() - 0.5) * 0.0015,
+          }
+        });
+      }
+
+      // Constellation edges
+      const edgeMat = new THREE.LineBasicMaterial({ color: 0x00ffcc, transparent: true, opacity: 0.06 });
+      let edgesMesh = null;
+      function buildEdges() {
+        if (edgesMesh) { scene.remove(edgesMesh); edgesMesh.geometry.dispose(); }
+        const pos = [];
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            if (nodes[i].mesh.position.distanceTo(nodes[j].mesh.position) < 2.8)
+              pos.push(...nodes[i].mesh.position.toArray(), ...nodes[j].mesh.position.toArray());
+          }
+        }
+        const geo = new THREE.BufferGeometry();
+        geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(pos), 3));
+        edgesMesh = new THREE.LineSegments(geo, edgeMat);
+        scene.add(edgesMesh);
+      }
+      buildEdges();
+
+      let mouseX = 0, mouseY = 0;
+      document.addEventListener('mousemove', e => {
+        mouseX = (e.clientX / window.innerWidth  - 0.5) * 2;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+      });
+
+      let frame = 0;
+      function animate() {
+        requestAnimationFrame(animate);
+        frame++;
+
+        for (const n of nodes) {
+          // drift
+          n.mesh.position.x += n.vel.x;
+          n.mesh.position.y += n.vel.y;
+          n.mesh.position.z += n.vel.z;
+          if (Math.abs(n.mesh.position.x) > SX / 2) n.vel.x *= -1;
+          if (Math.abs(n.mesh.position.y) > SY / 2) n.vel.y *= -1;
+          if (Math.abs(n.mesh.position.z) > SZ / 2) n.vel.z *= -1;
+          // pulse opacity
+          n.mesh.material.opacity = n.baseOpacity * (0.65 + 0.35 * Math.sin(frame * n.pulseSpeed + n.pulseOffset));
+          // bright nodes pulse scale
+          if (n.bright) {
+            const s = 1 + 0.22 * Math.sin(frame * n.pulseSpeed * 0.8 + n.pulseOffset);
+            n.mesh.scale.set(s, s, s);
+          }
+        }
+
+        if (frame % 6 === 0) buildEdges();
+
+        // slow scene drift in 3D
+        scene.rotation.y += 0.00035;
+        scene.rotation.x += 0.00012;
+
+        // mouse parallax
+        camera.position.x += (mouseX * 0.45 - camera.position.x) * 0.022;
+        camera.position.y += (-mouseY * 0.32 - camera.position.y) * 0.022;
+        camera.lookAt(scene.position);
+
+        renderer.render(scene, camera);
+      }
+      animate();
+    })();
+
+    // ─── 3D Card Tilt Effect ─────────────────────────────────────
+    document.querySelectorAll('.tilt-card, .project-card, .cert-card, .ach-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(800px) rotateY(${x * 11}deg) rotateX(${-y * 7}deg) translateY(-5px)`;
+        card.style.transition = 'none';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease';
+      });
+    });
+
+    // ─── Hero Orb Float + Mouse Parallax ─────────────────────────
+    (function() {
+      const orb1 = document.querySelector('.hero-orb-1');
+      const orb2 = document.querySelector('.hero-orb-2');
+      const orb3 = document.querySelector('.hero-orb-3');
+      if (!orb1) return;
+      let hx = 0, hy = 0;
+      document.addEventListener('mousemove', e => {
+        hx = e.clientX / window.innerWidth - 0.5;
+        hy = e.clientY / window.innerHeight - 0.5;
+      });
+      let t = 0;
+      (function floatOrbs() {
+        t += 0.007;
+        orb1.style.transform = `translate(${Math.sin(t) * 22 + hx * 34}px, ${Math.cos(t * 0.72) * 26 + hy * 24}px)`;
+        orb2.style.transform = `translate(${Math.cos(t * 0.83) * 16 + hx * 22}px, ${Math.sin(t * 0.95) * 20 + hy * 16}px)`;
+        orb3.style.transform = `translate(${Math.sin(t * 1.1) * 13 + hx * 14}px, ${Math.cos(t * 0.88) * 14 + hy * 10}px)`;
+        requestAnimationFrame(floatOrbs);
+      })();
+    })();
+
+    // ─── Holographic Card Shimmer ─────────────────────────────────
+    (function() {
+      function addShimmer(sel) {
+        document.querySelectorAll(sel).forEach(card => {
+          const s = document.createElement('span');
+          s.className = 'card-shimmer';
+          card.appendChild(s);
+          card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            s.style.setProperty('--cx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+            s.style.setProperty('--cy', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+            s.classList.add('active');
           });
-        },
-        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
-      );
-      document
-        .querySelectorAll(".reveal")
-        .forEach((el) => observer.observe(el));
+          card.addEventListener('mouseleave', () => s.classList.remove('active'));
+        });
+      }
+      addShimmer('.project-card, .cert-card, .ach-card, .service-card');
+    })();
+
+    // ─── Stats Card 3D Tilt ──────────────────────────────────────
+    const statsCard = document.getElementById('statsCard');
+    if (statsCard) {
+      statsCard.addEventListener('mousemove', e => {
+        const r = statsCard.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        statsCard.style.transform = `perspective(600px) rotateY(${x * 15}deg) rotateX(${-y * 10}deg)`;
+        statsCard.style.transition = 'none';
+      });
+      statsCard.addEventListener('mouseleave', () => {
+        statsCard.style.transform = 'perspective(600px) rotateY(0) rotateX(0)';
+        statsCard.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+      });
+    }
+
+    // ─── Intersection Observer (reveal) ─────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) el.target.classList.add('visible');
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
+
+    // ─── Typewriter rotating titles ──────────────────────────────
+    (function() {
+      const roles = ['Backend Engineer', 'API Architect', 'Systems Builder', 'Full-Stack Dev'];
+      let idx = 0, ch = 0, del = false;
+      const el = document.getElementById('typewriter-role');
+      if (!el) return;
+      function type() {
+        const cur = roles[idx];
+        el.textContent = del ? cur.slice(0, --ch) : cur.slice(0, ++ch);
+        if (!del && ch === cur.length) { del = true; setTimeout(type, 2200); return; }
+        if (del && ch === 0) { del = false; idx = (idx + 1) % roles.length; }
+        setTimeout(type, del ? 45 : 95);
+      }
+      setTimeout(type, 900);
+    })();
+
+    // ─── Counter animation ───────────────────────────────────────
+    (function() {
+      function animCount(el) {
+        const target = parseFloat(el.dataset.target || el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        if (isNaN(target)) return;
+        const dec = target % 1 !== 0 ? 2 : 0;
+        const t0 = performance.now();
+        const dur = 1800;
+        (function step(now) {
+          const p = Math.min((now - t0) / dur, 1);
+          const e = 1 - Math.pow(1 - p, 3);
+          el.textContent = (dec ? (e * target).toFixed(dec) : Math.floor(e * target)) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = (dec ? target.toFixed(dec) : target) + suffix;
+        })(t0);
+      }
+      const cObs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (!e.isIntersecting) return; animCount(e.target); cObs.unobserve(e.target); });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('[data-target],[data-count]').forEach(el => cObs.observe(el));
+    })();
+
+    // ─── Magnetic buttons ────────────────────────────────────────
+    (function() {
+      document.querySelectorAll('.hero-actions .btn, .cta-banner .btn').forEach(btn => {
+        btn.addEventListener('mousemove', e => {
+          const r = btn.getBoundingClientRect();
+          const x = (e.clientX - r.left - r.width  / 2) * 0.22;
+          const y = (e.clientY - r.top  - r.height / 2) * 0.22;
+          btn.style.transform = `translate(${x}px,${y - 2}px)`;
+          btn.style.transition = 'none';
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = '';
+          btn.style.transition = 'transform 0.5s cubic-bezier(0.16,1,0.3,1)';
+        });
+      });
+    })();
+
+    // ─── Page fade transition ────────────────────────────────────
+    (function() {
+      document.body.style.opacity = '0';
+      window.addEventListener('load', () => { document.body.style.opacity = '1'; });
+      window.addEventListener('pageshow', e => { if (e.persisted) document.body.style.opacity = '1'; });
+      document.addEventListener('click', e => {
+        const a = e.target.closest('a[href]');
+        if (!a) return;
+        const href = a.getAttribute('href') || '';
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.endsWith('.pdf')) return;
+        if (a.target === '_blank' || a.download) return;
+        if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+        try { if (new URL(a.href, location.href).hostname !== location.hostname && location.hostname !== '') return; }
+        catch(_) { return; }
+        e.preventDefault();
+        document.body.style.opacity = '0';
+        setTimeout(() => { location.href = a.href; }, 290);
+      });
+    })();
     </script>
   </body>
 </html>

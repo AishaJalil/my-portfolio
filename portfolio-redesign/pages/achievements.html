@@ -4,34 +4,149 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Achievements | Aisha Jalil</title>
-    <meta
-      name="description"
-      content="Dean's List and academic honors achieved by Aisha Jalil at FAST University."
-    />
+    <meta name="description" content="Rector's List, Dean's List, and academic honors achieved by Aisha Jalil at FAST University." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      /* ── Rector's List special card ──────────────────────── */
+      .rector-card {
+        background: rgba(15, 10, 5, 0.7);
+        border: 1px solid rgba(251, 191, 36, 0.35);
+        border-radius: var(--radius-lg);
+        padding: 2.5rem;
+        display: flex; gap: 2rem; align-items: center;
+        backdrop-filter: blur(20px);
+        position: relative; overflow: hidden;
+        transition: all 0.4s ease;
+        margin-bottom: 3.5rem;
+      }
+      .rector-card::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse 80% 60% at 0% 50%, rgba(251,191,36,0.06) 0%, transparent 70%),
+                    radial-gradient(ellipse 40% 100% at 100% 50%, rgba(251,191,36,0.04) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .rector-card::after {
+        content: '';
+        position: absolute; top: 0; left: 0; right: 0; height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(251,191,36,0.6), rgba(251,191,36,0.8), rgba(251,191,36,0.6), transparent);
+      }
+      .rector-card:hover {
+        border-color: rgba(251,191,36,0.6);
+        transform: translateY(-4px);
+        box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(251,191,36,0.08);
+      }
+      .rector-icon-wrap {
+        flex-shrink: 0;
+        width: 80px; height: 80px; border-radius: 50%;
+        background: rgba(251,191,36,0.08);
+        border: 2px solid rgba(251,191,36,0.4);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2rem; color: #fbbf24;
+        box-shadow: 0 0 30px rgba(251,191,36,0.2), inset 0 0 20px rgba(251,191,36,0.05);
+        animation: rector-pulse 3s ease-in-out infinite;
+      }
+      @keyframes rector-pulse {
+        0%, 100% { box-shadow: 0 0 20px rgba(251,191,36,0.2); }
+        50%       { box-shadow: 0 0 40px rgba(251,191,36,0.4), 0 0 80px rgba(251,191,36,0.1); }
+      }
+      .rector-body {}
+      .rector-badge-row {
+        display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem;
+      }
+      .rector-badge {
+        font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500;
+        letter-spacing: 0.14em; text-transform: uppercase;
+        padding: 0.25rem 0.75rem; border-radius: var(--radius-pill);
+        background: rgba(251,191,36,0.1);
+        border: 1px solid rgba(251,191,36,0.35);
+        color: #fbbf24;
+      }
+      .rector-card h2 {
+        font-size: 1.5rem; font-weight: 700; color: #fef3c7; margin-bottom: 0.4rem;
+        font-family: var(--font-display);
+      }
+      .rector-card .rector-semester {
+        font-family: var(--font-mono); font-size: 0.82rem; color: rgba(251,191,36,0.7);
+        margin-bottom: 0.75rem; letter-spacing: 0.04em;
+      }
+      .rector-card p {
+        font-size: 0.95rem; color: var(--text-2); max-width: 60ch; margin-bottom: 0;
+      }
+      .rector-stars {
+        display: flex; gap: 0.3rem; margin-bottom: 0.75rem;
+      }
+      .rector-stars i { color: #fbbf24; font-size: 0.85rem; filter: drop-shadow(0 0 4px rgba(251,191,36,0.5)); }
+
+      /* ── Dean's List section header ──────────────────────── */
+      .deans-section-title {
+        display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;
+      }
+      .deans-section-title h3 {
+        font-size: 1.1rem; color: var(--text-2); font-weight: 600;
+        font-family: var(--font-mono); letter-spacing: 0.04em;
+      }
+      .deans-section-title::before {
+        content: ''; width: 32px; height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(0,255,204,0.5));
+      }
+      .deans-section-title .badge-5x {
+        font-family: var(--font-mono); font-size: 0.68rem;
+        padding: 0.2rem 0.6rem; border-radius: var(--radius-pill);
+        background: rgba(0,255,204,0.08);
+        border: 1px solid rgba(0,255,204,0.25);
+        color: var(--accent); letter-spacing: 0.1em;
+      }
+
+      /* ── Achievement icon cards (no image) ───────────────── */
+      .ach-icon-card {
+        background: rgba(5,13,26,0.5);
+        border: 1px solid rgba(255,255,255,0.07);
+        border-radius: var(--radius-lg); padding: 2rem;
+        text-align: center; transition: all var(--trans);
+        display: flex; flex-direction: column; align-items: center;
+        backdrop-filter: blur(12px);
+        position: relative; overflow: hidden;
+      }
+      .ach-icon-card::after {
+        content: '';
+        position: absolute; inset: 0;
+        background: radial-gradient(circle at 50% 0%, rgba(0,255,204,0.05) 0%, transparent 70%);
+        opacity: 0; transition: opacity 0.3s ease;
+      }
+      .ach-icon-card:hover { border-color: rgba(0,255,204,0.25); transform: translateY(-5px); }
+      .ach-icon-card:hover::after { opacity: 1; }
+      .ach-icon-card .ach-icon {
+        width: 52px; height: 52px; border-radius: 50%;
+        background: rgba(0,255,204,0.08); border: 1px solid rgba(0,255,204,0.25);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.25rem; color: var(--accent); margin-bottom: 1rem;
+        box-shadow: 0 0 20px rgba(0,255,204,0.1); position: relative; z-index: 1;
+      }
+      .ach-icon-card h3 { font-size: 1rem; color: var(--text); margin-bottom: 0.3rem; position: relative; z-index: 1; font-family: var(--font-display); }
+      .ach-icon-card .ach-sem { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); margin-bottom: 0.5rem; position: relative; z-index: 1; letter-spacing: 0.06em; }
+      .ach-icon-card p { font-size: 0.85rem; color: var(--text-2); margin-bottom: 0; position: relative; z-index: 1; }
+
+      @media (max-width: 640px) {
+        .rector-card { flex-direction: column; text-align: center; }
+        .rector-icon-wrap { margin: 0 auto; }
+      }
+    </style>
   </head>
   <body>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
     <header class="site-header">
       <div class="container header-inner">
-        <div class="logo">
-          <a href="../index.html">Aisha Jalil<span class="accent">.</span></a>
-        </div>
-        <button
-          class="nav-toggle"
-          aria-label="Toggle navigation"
-          onclick="document.querySelector('.main-nav').classList.toggle('open')"
-        >
+        <div class="logo"><a href="../index.html">Aisha Jalil<span class="accent">.</span></a></div>
+        <button class="nav-toggle" aria-label="Toggle navigation"
+          onclick="document.querySelector('.main-nav').classList.toggle('open')">
           <span></span><span></span><span></span>
         </button>
         <nav class="main-nav">
@@ -41,166 +156,88 @@
           <a class="nav-item" href="certifications.html">Certifications</a>
           <a class="nav-item active" href="achievements.html">Achievements</a>
           <a class="nav-item" href="contact.html">Contact</a>
-          <a
-            class="nav-item nav-resume"
-            href="../resume/Aisha_Jalil_Resume.pdf"
-            target="_blank"
-            rel="noopener"
-            ><i class="fas fa-download" style="font-size: 0.75rem"></i>
-            Resume</a
-          >
+          <a class="nav-item nav-resume" href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener">
+            <i class="fas fa-download" style="font-size:0.75rem"></i> Resume
+          </a>
         </nav>
       </div>
     </header>
 
     <div class="page-hero">
       <div class="container">
+        <a class="back-btn animate-fade-up delay-1" href="../index.html">
+          <i class="fas fa-arrow-left"></i> Back
+        </a>
         <div class="section-label animate-fade-up delay-1">Honors</div>
         <h1 class="animate-fade-up delay-2">Achievements &amp; Recognition</h1>
         <p class="animate-fade-up delay-3">
-          Academic recognition earned through consistent high performance in the
-          Computer Science program at FAST University.
+          Consistent top-tier academic performance at FAST-NUCES — from Dean's Honor List to the university's highest distinction.
         </p>
       </div>
     </div>
 
-    <section class="section-pad" style="background: var(--bg)">
+    <section class="section-pad" style="background:var(--bg)">
       <div class="container">
-        <!-- Stats highlight bar -->
-        <div
-          class="reveal"
-          style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 1px;
-            background: var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            margin-bottom: 3rem;
-          "
-        >
-          <div
-            style="
-              background: var(--bg-1);
-              padding: 1.75rem;
-              text-align: center;
-            "
-          >
-            <div
-              style="
-                font-family: var(--font-display);
-                font-size: 2.5rem;
-                font-weight: 700;
-                color: var(--accent);
-                line-height: 1;
-              "
-            >
-              3×
-            </div>
-            <div
-              style="
-                font-size: 0.85rem;
-                color: var(--text-2);
-                margin-top: 0.4rem;
-              "
-            >
-              Dean's Honor List
-            </div>
+
+        <!-- Stats bar -->
+        <div class="achievements-stats reveal">
+          <div class="stat-block">
+            <div class="stat-block-num" data-count="5" data-suffix="×">5×</div>
+            <div class="stat-block-label">Dean's Honor List</div>
           </div>
-          <div
-            style="
-              background: var(--bg-1);
-              padding: 1.75rem;
-              text-align: center;
-            "
-          >
-            <div
-              style="
-                font-family: var(--font-display);
-                font-size: 2.5rem;
-                font-weight: 700;
-                color: var(--accent);
-                line-height: 1;
-              "
-            >
-              3.65
-            </div>
-            <div
-              style="
-                font-size: 0.85rem;
-                color: var(--text-2);
-                margin-top: 0.4rem;
-              "
-            >
-              Cumulative GPA
-            </div>
+          <div class="stat-block">
+            <div class="stat-block-num">1×</div>
+            <div class="stat-block-label">Rector's List</div>
           </div>
-          <div
-            style="
-              background: var(--bg-1);
-              padding: 1.75rem;
-              text-align: center;
-            "
-          >
-            <div
-              style="
-                font-family: var(--font-display);
-                font-size: 2.5rem;
-                font-weight: 700;
-                color: var(--accent);
-                line-height: 1;
-              "
-            >
-              Top
-            </div>
-            <div
-              style="
-                font-size: 0.85rem;
-                color: var(--text-2);
-                margin-top: 0.4rem;
-              "
-            >
-              CS Performer
-            </div>
+          <div class="stat-block">
+            <div class="stat-block-num" data-count="3.65">3.65</div>
+            <div class="stat-block-label">Cumulative GPA</div>
           </div>
-          <div
-            style="
-              background: var(--bg-1);
-              padding: 1.75rem;
-              text-align: center;
-            "
-          >
-            <div
-              style="
-                font-family: var(--font-display);
-                font-size: 2.5rem;
-                font-weight: 700;
-                color: var(--accent);
-                line-height: 1;
-              "
-            >
-              FAST
+          <div class="stat-block">
+            <div class="stat-block-num">FAST</div>
+            <div class="stat-block-label">NUCES University</div>
+          </div>
+        </div>
+
+        <!-- ── Rector's List (top honor) ──────────────────── -->
+        <div class="reveal">
+          <div class="rector-card">
+            <div class="rector-icon-wrap">
+              <i class="fas fa-crown"></i>
             </div>
-            <div
-              style="
-                font-size: 0.85rem;
-                color: var(--text-2);
-                margin-top: 0.4rem;
-              "
-            >
-              NUCES University
+            <div class="rector-body">
+              <div class="rector-badge-row">
+                <span class="rector-badge">Highest University Honor</span>
+              </div>
+              <div class="rector-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <h2>Rector's List — Fall 2025</h2>
+              <p class="rector-semester">FAST-NUCES · Fall Semester 2025</p>
+              <p>
+                Top academic honor at FAST-NUCES — awarded to students achieving the highest
+                academic excellence in the university. A rare distinction reflecting exceptional
+                performance across all courses.
+              </p>
             </div>
           </div>
         </div>
 
+        <!-- ── Dean's List ────────────────────────────────── -->
+        <div class="deans-section-title">
+          <h3>Dean's Honor List</h3>
+          <span class="badge-5x">5 CONSECUTIVE SEMESTERS</span>
+        </div>
+
         <div class="achievements-page-grid">
+
+          <!-- Existing image cards for first 3 -->
           <div class="ach-page-card reveal">
             <img src="../images/a1.jpg" alt="Dean's List Spring 2024" />
             <div class="ach-page-content">
               <h3>Dean's List — Spring 2024</h3>
-              <p>
-                Awarded for academic excellence in upper-division CS courses.
-              </p>
+              <p>Awarded for academic excellence in upper-division CS courses.</p>
             </div>
           </div>
 
@@ -208,10 +245,7 @@
             <img src="../images/a2.jpg" alt="Dean's List Fall 2023" />
             <div class="ach-page-content">
               <h3>Dean's List — Fall 2023</h3>
-              <p>
-                Recognized for top-tier GPA and performance in core systems
-                subjects.
-              </p>
+              <p>Recognized for top-tier GPA and performance in core systems subjects.</p>
             </div>
           </div>
 
@@ -219,25 +253,35 @@
             <img src="../images/a3.jpg" alt="Dean's List Spring 2023" />
             <div class="ach-page-content">
               <h3>Dean's List — Spring 2023</h3>
-              <p>
-                Strong academic standing across programming &amp; theory
-                courses.
-              </p>
+              <p>Strong academic standing across programming &amp; theory courses.</p>
             </div>
           </div>
+
+          <!-- Icon cards for entries without images -->
+          <div class="ach-icon-card reveal">
+            <div class="ach-icon"><i class="fas fa-medal"></i></div>
+            <h3>Dean's List — Fall 2024</h3>
+            <div class="ach-sem">Fall Semester 2024</div>
+            <p>Maintained high academic standing through advanced CS coursework.</p>
+          </div>
+
+          <div class="ach-icon-card reveal">
+            <div class="ach-icon"><i class="fas fa-medal"></i></div>
+            <h3>Dean's List — Fall 2025</h3>
+            <div class="ach-sem">Fall Semester 2025</div>
+            <p>Consistent top-tier performance leading to Rector's List distinction.</p>
+          </div>
+
         </div>
+
       </div>
     </section>
 
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a class="footer-logo" href="../index.html"
-            >Aisha Jalil<span class="accent">.</span></a
-          >
-          <p class="footer-tagline">
-            Building reliable backends, clear APIs, and scalable systems.
-          </p>
+          <a class="footer-logo" href="../index.html">Aisha Jalil<span class="accent">.</span></a>
+          <p class="footer-tagline">Building reliable backends, clear APIs, and scalable systems.</p>
         </div>
         <nav>
           <p class="footer-nav-title">Navigation</p>
@@ -246,60 +290,80 @@
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
-            <a
-              href="../resume/Aisha_Jalil_Resume.pdf"
-              target="_blank"
-              rel="noopener"
-              >Resume</a
-            >
+            <a href="../resume/Aisha_Jalil_Resume.pdf" target="_blank" rel="noopener">Resume</a>
           </div>
         </nav>
         <div>
           <p class="footer-social-title">Connect</p>
           <div class="footer-social-links">
-            <a
-              class="footer-social-link"
-              href="https://github.com/AishaJalil"
-              target="_blank"
-              aria-label="GitHub"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              class="footer-social-link"
-              href="https://www.linkedin.com/in/aisha-jalil"
-              target="_blank"
-              aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              class="footer-social-link"
-              href="mailto:aishajalil387@gmail.com"
-              aria-label="Email"
-              ><i class="fas fa-envelope"></i
-            ></a>
+            <a class="footer-social-link" href="https://github.com/AishaJalil" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a class="footer-social-link" href="https://www.linkedin.com/in/aisha-jalil" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="footer-social-link" href="mailto:aishajalil387@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
       </div>
       <div class="container footer-bottom">
         <p>&copy; 2025 Aisha Jalil. All rights reserved.</p>
-        <p class="footer-bottom-right">
-          Crafted with <span class="accent">♥</span> in Karachi
-        </p>
+        <p class="footer-bottom-right">Crafted with <span class="accent">♥</span> in Karachi</p>
       </div>
     </footer>
 
     <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((el) => {
-            if (el.isIntersecting) el.target.classList.add("visible");
-          });
-        },
-        { threshold: 0.1 },
-      );
-      document
-        .querySelectorAll(".reveal")
-        .forEach((el) => observer.observe(el));
+      const dot = document.getElementById('cursorDot');
+      const ring = document.getElementById('cursorRing');
+      let mx=0,my=0,rx=0,ry=0;
+      document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+      (function tick(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tick);})();
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      // ─── 3D Tilt + Holographic Shimmer ────────────────────────
+      document.querySelectorAll('.ach-page-card, .rector-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = `perspective(900px) rotateY(${x * 9}deg) rotateX(${-y * 6}deg) translateY(-4px)`;
+          card.style.transition = 'none';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+          card.style.transition = 'transform 0.5s cubic-bezier(0.16,1,0.3,1), border-color 0.3s ease, box-shadow 0.3s ease';
+        });
+        const s = document.createElement('span');
+        s.className = 'card-shimmer';
+        card.appendChild(s);
+        card.addEventListener('mousemove', e => {
+          const r = card.getBoundingClientRect();
+          s.style.setProperty('--cx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+          s.style.setProperty('--cy', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+          s.classList.add('active');
+        });
+        card.addEventListener('mouseleave', () => s.classList.remove('active'));
+      });
+
+      // ─── Page fade transition ────────────────────────────────
+      (function() {
+        document.body.style.opacity = '0';
+        window.addEventListener('load', () => { document.body.style.opacity = '1'; });
+        window.addEventListener('pageshow', e => { if (e.persisted) document.body.style.opacity = '1'; });
+        document.addEventListener('click', e => {
+          const a = e.target.closest('a[href]');
+          if (!a) return;
+          const href = a.getAttribute('href') || '';
+          if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.endsWith('.pdf')) return;
+          if (a.target === '_blank' || a.download) return;
+          if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+          try { if (new URL(a.href, location.href).hostname !== location.hostname && location.hostname !== '') return; }
+          catch(_) { return; }
+          e.preventDefault();
+          document.body.style.opacity = '0';
+          setTimeout(() => { location.href = a.href; }, 290);
+        });
+      })();
     </script>
   </body>
 </html>
